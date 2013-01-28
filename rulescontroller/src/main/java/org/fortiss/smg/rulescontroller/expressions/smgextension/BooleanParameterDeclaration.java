@@ -8,14 +8,14 @@ public class BooleanParameterDeclaration extends ParameterDeclaration {
 		super(new BooleanType(), false);
 	}
 	
-	public void setValue(boolean b)
+	public boolean setValue(boolean b)
 	{
-		super.setValue(b);
+		return super.setValue(b);
 	}
 	
-	public void setValue(Boolean b)
+	public boolean setValue(Boolean b)
 	{
-		super.setValue(b);
+		return super.setValue(b);
 	}
 	
 	public boolean setValue(String val)

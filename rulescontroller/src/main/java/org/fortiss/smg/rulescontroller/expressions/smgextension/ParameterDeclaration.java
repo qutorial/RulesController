@@ -5,6 +5,7 @@ import org.fortiss.smg.rulescontroller.expressions.types.IType;
 class ParameterDeclaration {
 	IType mType;
 	Object mValue;	
+	String mName;
 	
 	protected ParameterDeclaration(IType mType, Object mValue) {
 		this.mType = mType;
@@ -23,7 +24,20 @@ class ParameterDeclaration {
 		return mValue;
 	}
 	
-	protected void setValue(Object mValue) {
+	protected boolean setValue(Object mValue) {
 		this.mValue = mValue;
+		return true;		
 	}	
+	
+	public String getName()
+	{
+		return mName;
+	}
+	
+//	package visible
+	void setName(String name) {
+		mName = name;
+	}
+	
+	
 }
