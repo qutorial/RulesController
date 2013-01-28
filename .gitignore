@@ -1,0 +1,16 @@
+*.class
+.project
+.settings
+target
+.classpath
+*.log
+
+*/bin
+bin
+*.*~
+
+.metadata
+*.tgz
+*.log.*
+*.log.1
+*.log.2
