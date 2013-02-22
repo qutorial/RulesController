@@ -8,8 +8,6 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.sun.org.apache.regexp.internal.REUtil;
-
 
 public class FirstRuleCheckTest {
 

@@ -168,11 +168,11 @@ public class SmgEnvironment implements Serializable, ISmgEnvironment {
 		return true;
 	}
 
-	private class RuleChecker implements Runnable {
+	private class RuleCheckRunnable implements Runnable {
 		private IRule mRule;
 		private IResultWaiter mResultWaiter;
 
-		public RuleChecker(IRule rule, IResultWaiter resultWaiter) {
+		public RuleCheckRunnable(IRule rule, IResultWaiter resultWaiter) {
 			super();
 			mRule = rule;
 			mResultWaiter = resultWaiter;
@@ -182,6 +182,9 @@ public class SmgEnvironment implements Serializable, ISmgEnvironment {
 		public void run() {
 
 			boolean passed = true;
+			
+			
+			
 
 			try {
 				Thread.sleep(15000);
@@ -207,7 +210,7 @@ public class SmgEnvironment implements Serializable, ISmgEnvironment {
 
 	private void checkRuleAndAdd(IRule rule, IResultWaiter resultWaiter) {
 		executor = Executors.newFixedThreadPool(1);
-		executor.execute(new RuleChecker(rule, resultWaiter));
+		executor.execute(new RuleCheckRunnable(rule, resultWaiter));
 	}
 
 }
