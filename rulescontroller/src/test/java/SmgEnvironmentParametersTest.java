@@ -1,11 +1,11 @@
 import static org.junit.Assert.fail;
 
+import org.fortiss.smg.rulescontroller.smgenvironment.SmgEnvironment;
+import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.AddParameterException;
+import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.DuplicateNameException;
+import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.NullStringAsNameException;
 import org.fortiss.smg.rulescontroller.smgextension.BooleanParameterDeclaration;
 import org.fortiss.smg.rulescontroller.smgextension.NumericalParameterDeclaration;
-import org.fortiss.smg.rulescontroller.smgextension.SmgEnvironment;
-import org.fortiss.smg.rulescontroller.smgextension.exceptions.AddParameterException;
-import org.fortiss.smg.rulescontroller.smgextension.exceptions.DuplicateNameException;
-import org.fortiss.smg.rulescontroller.smgextension.exceptions.NullStringAsNameException;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -28,7 +28,7 @@ public class SmgEnvironmentParametersTest {
 	public void testBoolean() {
 		BooleanParameterDeclaration bpd = null;
 		try {
-			bpd = Environment.addNewBooleanParameter("booleanPar");
+			bpd = Environment.addBooleanParameter("booleanPar");
 		} catch (AddParameterException e) {
 			fail("Add boolean parameter has thrown unexpected exception"
 					+ e.getMessage());
@@ -44,7 +44,7 @@ public class SmgEnvironmentParametersTest {
 	public void testNumerical() {
 		NumericalParameterDeclaration npd = null;
 		try {
-			npd = Environment.addNewNumericalParameter("numericalPar");
+			npd = Environment.addNumericalParameter("numericalPar");
 		} catch (AddParameterException e) {
 			fail("Add numerical parameter has thrown unexpected exception"
 					+ e.getMessage());
@@ -59,42 +59,42 @@ public class SmgEnvironmentParametersTest {
 	@Test (expected = NullStringAsNameException.class)
 	public void testNull() throws Exception
 	{
-		Environment.addNewBooleanParameter(null);
+		Environment.addBooleanParameter(null);
 	}
 	
 	@Test (expected = NullStringAsNameException.class)
 	public void testNullNum() throws Exception
 	{
-		Environment.addNewNumericalParameter(null);
+		Environment.addNumericalParameter(null);
 	}
 	
 	
 	@Test (expected = DuplicateNameException.class)
 	public void testDup1() throws Exception
 	{
-		Environment.addNewNumericalParameter("par");
-		Environment.addNewNumericalParameter("par");
+		Environment.addNumericalParameter("par");
+		Environment.addNumericalParameter("par");
 	}
 	
 	@Test (expected = DuplicateNameException.class)
 	public void testDup2() throws Exception
 	{
-		Environment.addNewBooleanParameter("parb");
-		Environment.addNewBooleanParameter("parb");
+		Environment.addBooleanParameter("parb");
+		Environment.addBooleanParameter("parb");
 	}
 	
 	@Test (expected = DuplicateNameException.class)
 	public void testDup3() throws Exception
 	{
-		Environment.addNewBooleanParameter("parc");
-		Environment.addNewNumericalParameter("parc");
+		Environment.addBooleanParameter("parc");
+		Environment.addNumericalParameter("parc");
 	}
 	
 	@Test (expected = DuplicateNameException.class)
 	public void testDup4() throws Exception
 	{
-		Environment.addNewNumericalParameter("pard");
-		Environment.addNewBooleanParameter("pard");		
+		Environment.addNumericalParameter("pard");
+		Environment.addBooleanParameter("pard");		
 	}
 	
 	

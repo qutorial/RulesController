@@ -4,10 +4,10 @@ import org.fortiss.smg.rulescontroller.deviceinterfaces.EMeasurementUnit;
 import org.fortiss.smg.rulescontroller.devices.BooleanActuator;
 import org.fortiss.smg.rulescontroller.devices.NumericalActuator;
 import org.fortiss.smg.rulescontroller.devices.NumericalSensor;
-import org.fortiss.smg.rulescontroller.smgextension.SmgEnvironment;
-import org.fortiss.smg.rulescontroller.smgextension.exceptions.AddDeviceException;
-import org.fortiss.smg.rulescontroller.smgextension.exceptions.DuplicateDeviceException;
-import org.fortiss.smg.rulescontroller.smgextension.exceptions.DuplicateDeviceNameException;
+import org.fortiss.smg.rulescontroller.smgenvironment.SmgEnvironment;
+import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.AddDeviceException;
+import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.DuplicateDeviceException;
+import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.DuplicateDeviceNameException;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -32,7 +32,7 @@ public class SmgEnvironmentDevicesTest {
 		acSwitch.setId("enocean?something");
 		acSwitch.setName("ACSwitch");
 
-		int n = Environment.getAllDevices().size();
+		int n = Environment.getDevices().size();
 
 		boolean res = Environment.addDevice(acSwitch);
 
@@ -40,7 +40,7 @@ public class SmgEnvironmentDevicesTest {
 			fail("Fails to add a device");
 		}
 
-		if (n != Environment.getAllDevices().size() - 1) {
+		if (n != Environment.getDevices().size() - 1) {
 			fail("The device has not been really added");
 		}
 	}
@@ -84,7 +84,7 @@ public class SmgEnvironmentDevicesTest {
 		temp.setName("Temperature");
 		temp.setMeasurementUnit(EMeasurementUnit.DEGREES_CELCIUS);
 
-		int n = Environment.getAllDevices().size();
+		int n = Environment.getDevices().size();
 
 		boolean res = Environment.addDevice(temp);
 
@@ -92,7 +92,7 @@ public class SmgEnvironmentDevicesTest {
 			fail("Fails to add a device");
 		}
 
-		if (n != Environment.getAllDevices().size() - 1) {
+		if (n != Environment.getDevices().size() - 1) {
 			fail("The device has not been really added");
 		}
 	}
@@ -106,7 +106,7 @@ public class SmgEnvironmentDevicesTest {
 		temp.setName("Light");
 		temp.setMeasurementUnit(EMeasurementUnit.LUX);
 
-		int n = Environment.getAllDevices().size();
+		int n = Environment.getDevices().size();
 
 		boolean res = Environment.addDevice(temp);
 
@@ -114,7 +114,7 @@ public class SmgEnvironmentDevicesTest {
 			fail("Fails to add a device");
 		}
 
-		if (n != Environment.getAllDevices().size() - 1) {
+		if (n != Environment.getDevices().size() - 1) {
 			fail("The device has not been really added");
 		}
 	}
@@ -127,7 +127,7 @@ public class SmgEnvironmentDevicesTest {
 		temp.setName("Temperature2");
 		temp.setMeasurementUnit(EMeasurementUnit.DEGREES_CELCIUS);
 
-		int n = Environment.getAllDevices().size();
+		int n = Environment.getDevices().size();
 
 		boolean res = Environment.addDevice(temp);
 
@@ -135,7 +135,7 @@ public class SmgEnvironmentDevicesTest {
 			fail("Fails to add a device");
 		}
 
-		if (n != Environment.getAllDevices().size() - 1) {
+		if (n != Environment.getDevices().size() - 1) {
 			fail("The device has not been really added");
 		}
 
@@ -155,7 +155,7 @@ public class SmgEnvironmentDevicesTest {
 		temp.setName("Temperature222");
 		temp.setMeasurementUnit(EMeasurementUnit.DEGREES_CELCIUS);
 
-		int n = Environment.getAllDevices().size();
+		int n = Environment.getDevices().size();
 
 		boolean res = Environment.addDevice(temp);
 
@@ -163,7 +163,7 @@ public class SmgEnvironmentDevicesTest {
 			fail("Fails to add a device");
 		}
 
-		if (n != Environment.getAllDevices().size() - 1) {
+		if (n != Environment.getDevices().size() - 1) {
 			fail("The device has not been really added");
 		}
 

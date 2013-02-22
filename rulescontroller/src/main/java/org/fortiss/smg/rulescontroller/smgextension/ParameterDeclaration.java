@@ -40,8 +40,7 @@ public abstract class ParameterDeclaration implements Serializable {
 		return mName;
 	}
 	
-//	package visible
-	void setName(String name) {
+	public void setName(String name) {
 		mName = name;
 	}
 	
