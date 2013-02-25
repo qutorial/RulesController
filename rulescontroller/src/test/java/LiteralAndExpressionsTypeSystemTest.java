@@ -180,7 +180,7 @@ public class LiteralAndExpressionsTypeSystemTest {
 		assertTrue("PlusBinaryExpression: type is numerical", plus.getType()
 				.equals(new NumericalType()));		
 		assertTrue("Setting lhs PlusBinaryExpression", plus.setLeftSide(numberNine));
-		assertTrue("Setting rhs PlusBinaryExpression", plus.setLeftSide(numberSevenPointFive));
+		assertTrue("Setting rhs PlusBinaryExpression", plus.setRightSide(numberSevenPointFive));
 		
 		
 		MinusBinaryExpression minus = new MinusBinaryExpression();
@@ -188,7 +188,7 @@ public class LiteralAndExpressionsTypeSystemTest {
 		assertTrue("MinusBinaryExpression: type is numerical", minus.getType()
 				.equals(new NumericalType()));
 		assertTrue("Setting lhs MinusBinaryExpression", minus.setLeftSide(numberNine));
-		assertTrue("Setting rhs MinusBinaryExpression", minus.setLeftSide(numberSevenPointFive));
+		assertTrue("Setting rhs MinusBinaryExpression", minus.setRightSide(numberSevenPointFive));
 
 		
 		GreaterOrEqualExpression greq = new GreaterOrEqualExpression();

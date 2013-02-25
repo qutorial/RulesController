@@ -37,5 +37,10 @@ public class BooleanExpressionContainer implements IExpression, Serializable {
 	@Override
 	public IType getType() {
 		return new BooleanType();
-	}	
+	}
+
+	@Override
+	public String getUsualRepresentation() {
+		return mExpression.getUsualRepresentation();
+	}
 }

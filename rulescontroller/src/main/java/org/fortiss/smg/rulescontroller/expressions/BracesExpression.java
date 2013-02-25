@@ -21,4 +21,14 @@ public class BracesExpression implements IExpression{
 	{
 		mExpression = expr;
 	}
+	
+	public IExpression getExpression()
+	{
+		return mExpression;
+	}
+
+	@Override
+	public String getUsualRepresentation() {
+		return "()";
+	}
 }

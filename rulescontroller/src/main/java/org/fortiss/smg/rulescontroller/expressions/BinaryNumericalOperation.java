@@ -9,7 +9,7 @@ import org.fortiss.smg.rulescontroller.expressions.types.NumericalType;
  *	Operates on numbers returns number
  *
  */
-public class BinaryNumericalOperation extends BinaryExpressionBase {
+public abstract class BinaryNumericalOperation extends BinaryExpressionBase {
 
 	public IType getArgumentsType() {
 		return new NumericalType();

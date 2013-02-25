@@ -2,7 +2,7 @@ package org.fortiss.smg.rulescontroller.expressions;
 
 import org.fortiss.smg.rulescontroller.expressions.types.IType;
 
-public class EqualityLikeComparison implements IBinaryExpression {
+public abstract class EqualityLikeComparison implements IBinaryExpression {
 
 	IExpression mRightSide;
 	IExpression mLeftSide;

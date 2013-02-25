@@ -1,8 +1,14 @@
 package org.fortiss.smg.rulescontroller.expressions.smgextension;
 
+import java.io.Serializable;
+
 import org.fortiss.smg.rulescontroller.expressions.types.IType;
 
-class ParameterDeclaration {
+public abstract class ParameterDeclaration implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8184401302153372105L;
 	IType mType;
 	Object mValue;	
 	String mName;
@@ -34,8 +40,7 @@ class ParameterDeclaration {
 		return mName;
 	}
 	
-//	package visible
-	void setName(String name) {
+	public void setName(String name) {
 		mName = name;
 	}
 	

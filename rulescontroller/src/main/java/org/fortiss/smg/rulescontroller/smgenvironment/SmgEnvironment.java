@@ -8,6 +8,9 @@ import java.util.concurrent.Executors;
 import org.fortiss.smg.rulescontroller.deviceinterfaces.IBooleanDevice;
 import org.fortiss.smg.rulescontroller.deviceinterfaces.IDevice;
 import org.fortiss.smg.rulescontroller.deviceinterfaces.INumericalDevice;
+import org.fortiss.smg.rulescontroller.expressions.smgextension.BooleanParameterDeclaration;
+import org.fortiss.smg.rulescontroller.expressions.smgextension.NumericalParameterDeclaration;
+import org.fortiss.smg.rulescontroller.expressions.smgextension.ParameterDeclaration;
 import org.fortiss.smg.rulescontroller.ruleinterfaces.IRule;
 import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.AddDeviceException;
 import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.AddParameterException;
@@ -18,9 +21,6 @@ import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.DuplicateDevice
 import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.DuplicateDeviceNameException;
 import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.DuplicateNameException;
 import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.NullStringAsNameException;
-import org.fortiss.smg.rulescontroller.smgextension.BooleanParameterDeclaration;
-import org.fortiss.smg.rulescontroller.smgextension.NumericalParameterDeclaration;
-import org.fortiss.smg.rulescontroller.smgextension.ParameterDeclaration;
 import org.fortiss.utils.CollectionWrapper;
 
 public class SmgEnvironment implements Serializable, ISmgEnvironment {

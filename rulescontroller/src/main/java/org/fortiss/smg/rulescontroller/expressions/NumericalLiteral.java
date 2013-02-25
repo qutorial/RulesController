@@ -35,5 +35,10 @@ public class NumericalLiteral implements ILiteralExpression {
 			return false;
 		}
 	}
+
+	@Override
+	public String getUsualRepresentation() {
+		return mValue;
+	}
 	
 }

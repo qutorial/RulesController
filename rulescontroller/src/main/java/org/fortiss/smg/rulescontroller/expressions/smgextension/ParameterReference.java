@@ -19,4 +19,9 @@ public class ParameterReference implements ILiteralExpression {
 		return mDeclaration.getValue();			
 	}
 
+	@Override
+	public String getUsualRepresentation() {
+		return mDeclaration.getName();
+	}
+
 }

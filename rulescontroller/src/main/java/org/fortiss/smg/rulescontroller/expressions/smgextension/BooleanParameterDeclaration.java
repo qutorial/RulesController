@@ -4,6 +4,11 @@ import org.fortiss.smg.rulescontroller.expressions.types.BooleanType;
 
 public class BooleanParameterDeclaration extends ParameterDeclaration {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6503992201022953429L;
+
 	public BooleanParameterDeclaration() {
 		super(new BooleanType(), false);
 	}

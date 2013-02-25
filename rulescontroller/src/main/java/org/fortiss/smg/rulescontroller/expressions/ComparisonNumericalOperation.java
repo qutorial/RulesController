@@ -10,7 +10,7 @@ import org.fortiss.smg.rulescontroller.expressions.types.NumericalType;
  *	Operates on numbers returns boolean
  *
  */
-public class ComparisonNumericalOperation extends BinaryExpressionBase {
+public abstract class ComparisonNumericalOperation extends BinaryExpressionBase {
 
 	public IType getArgumentsType() {
 		return new NumericalType();

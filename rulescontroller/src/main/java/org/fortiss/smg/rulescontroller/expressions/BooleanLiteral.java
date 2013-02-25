@@ -49,4 +49,9 @@ public class BooleanLiteral implements ILiteralExpression{
 	public Object getValue() {
 		return mValue;
 	}
+
+	@Override
+	public String getUsualRepresentation() {
+		return mValue.toString();
+	}
 }

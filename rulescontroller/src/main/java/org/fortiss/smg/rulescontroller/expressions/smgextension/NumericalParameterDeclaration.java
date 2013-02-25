@@ -4,6 +4,11 @@ import org.fortiss.smg.rulescontroller.expressions.types.NumericalType;
 
 public class NumericalParameterDeclaration extends ParameterDeclaration {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 379324893988218626L;
+
 	public NumericalParameterDeclaration() {
 		super(new NumericalType(), 0);
 	}

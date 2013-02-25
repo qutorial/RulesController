@@ -4,13 +4,13 @@ import java.io.Serializable;
 import java.util.Collection;
 
 import org.fortiss.smg.rulescontroller.deviceinterfaces.IDevice;
+import org.fortiss.smg.rulescontroller.expressions.smgextension.BooleanParameterDeclaration;
+import org.fortiss.smg.rulescontroller.expressions.smgextension.NumericalParameterDeclaration;
+import org.fortiss.smg.rulescontroller.expressions.smgextension.ParameterDeclaration;
 import org.fortiss.smg.rulescontroller.ruleinterfaces.IRule;
 import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.AddDeviceException;
 import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.AddParameterException;
 import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.AddRuleException;
-import org.fortiss.smg.rulescontroller.smgextension.BooleanParameterDeclaration;
-import org.fortiss.smg.rulescontroller.smgextension.NumericalParameterDeclaration;
-import org.fortiss.smg.rulescontroller.smgextension.ParameterDeclaration;
 
 public interface ISmgEnvironment extends Serializable {
 

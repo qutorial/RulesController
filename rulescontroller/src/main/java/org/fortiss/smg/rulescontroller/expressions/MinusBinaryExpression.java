@@ -7,4 +7,10 @@ package org.fortiss.smg.rulescontroller.expressions;
  *	Regular minus
  */
 public class MinusBinaryExpression extends BinaryNumericalOperation implements IBinaryExpression{
+
+	@Override
+	public String getUsualRepresentation() {
+		return "-";
+	}
+	
 }

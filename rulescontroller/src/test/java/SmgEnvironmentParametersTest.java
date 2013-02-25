@@ -1,11 +1,11 @@
 import static org.junit.Assert.fail;
 
+import org.fortiss.smg.rulescontroller.expressions.smgextension.BooleanParameterDeclaration;
+import org.fortiss.smg.rulescontroller.expressions.smgextension.NumericalParameterDeclaration;
 import org.fortiss.smg.rulescontroller.smgenvironment.SmgEnvironment;
 import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.AddParameterException;
 import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.DuplicateNameException;
 import org.fortiss.smg.rulescontroller.smgenvironment.exceptions.NullStringAsNameException;
-import org.fortiss.smg.rulescontroller.smgextension.BooleanParameterDeclaration;
-import org.fortiss.smg.rulescontroller.smgextension.NumericalParameterDeclaration;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;

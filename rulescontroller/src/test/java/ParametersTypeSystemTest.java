@@ -1,11 +1,11 @@
 import static org.junit.Assert.assertTrue;
 
+import org.fortiss.smg.rulescontroller.expressions.smgextension.BooleanParameterDeclaration;
+import org.fortiss.smg.rulescontroller.expressions.smgextension.NumericalParameterDeclaration;
+import org.fortiss.smg.rulescontroller.expressions.smgextension.ParameterReference;
 import org.fortiss.smg.rulescontroller.expressions.types.BooleanType;
 import org.fortiss.smg.rulescontroller.expressions.types.IType;
 import org.fortiss.smg.rulescontroller.expressions.types.NumericalType;
-import org.fortiss.smg.rulescontroller.smgextension.BooleanParameterDeclaration;
-import org.fortiss.smg.rulescontroller.smgextension.NumericalParameterDeclaration;
-import org.fortiss.smg.rulescontroller.smgextension.ParameterReference;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
