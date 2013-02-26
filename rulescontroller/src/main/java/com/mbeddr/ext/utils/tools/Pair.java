@@ -9,4 +9,12 @@ public class Pair<T1, T2> {
 		mRight = right; 
 	}
 
+	public T1 getLeft() {
+		return mLeft;
+	}
+	
+	public T2 getRight() {
+		return mRight;
+	}
+	
 }
